@@ -40,7 +40,7 @@ def run_system_monolith():
             
            
             n.append(new_name)
-            r.append(new_rank)
+            r.append(new_rank)  # added r / d append
             d.append(new_div)
             print("Crew member added.")
             
