@@ -45,24 +45,31 @@ def run_system_monolith():
             print("Crew member added.")
             
         elif opt == "3":
-            rem = input("Name to remove: ")
-            if rem not in n:
+            deln = input("Name to remove: ")
+            if deln not in n:
                 print("Name is not part of our database")
             else:
-                if n.count(rem) > 1:
-                    remr = input("Rank of individual specified")
-                    idxr = r.index(remr)
-                    n.pop(idxr)
-                    r.pop(idxr)
-                    d.pop(idxr)
+                if n.count(deln) > 1:
+                    delr = input("Rank of individual specified: ") #in case of 2 people with the same name, allows user to specify rank if they try to delete a name thats in there more than once
+                    for x in range(len(n)):
+                        if n[x] == deln:
+                            rank = r[x]
+                            if rank == delr:
+                                n.pop(x)
+                                r.pop(x)
+                                d.pop(x)
+                                print("Removed entry")
+                                break
+                                
                 else:
-                 idx = n.index(rem)
-                 n.pop(idx)     #if the name appears more than once, the system will clarify by asking for the rank, and then div if necessary, in order to delete the correct entry
-                 r.pop(idx)
-                 d.pop(idx)
-                 print("Removed.")
-           
-
+                    idxn = n.index(deln)
+                    n.pop(idxn)     
+                    r.pop(idxn)
+                    d.pop(idxn)
+                    print("Removed.") #doesnt ask for rank if there is only one person with the name, just removes
+                                
+                    
+                
           
             
             
