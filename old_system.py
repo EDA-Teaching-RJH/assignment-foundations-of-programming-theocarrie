@@ -46,12 +46,25 @@ def run_system_monolith():
             
         elif opt == "3":
             rem = input("Name to remove: ")
+            if rem not in n:
+                print("Name is not part of our database")
+            else:
+                if n.count(rem) > 1:
+                    remr = input("Rank of individual specified")
+                    idxr = r.index(remr)
+                    n.pop(idxr)
+                    r.pop(idxr)
+                    d.pop(idxr)
+                else:
+                 idx = n.index(rem)
+                 n.pop(idx)     #if the name appears more than once, the system will clarify by asking for the rank, and then div if necessary, in order to delete the correct entry
+                 r.pop(idx)
+                 d.pop(idx)
+                 print("Removed.")
            
-            idx = n.index(rem)
-            n.pop(idx)
-            r.pop(idx)
-            d.pop(idx)
-            print("Removed.")
+
+          
+            
             
         elif opt == "4":
             print("Analyzing...")
