@@ -41,7 +41,7 @@ def display_roster():
        real_menu()
                 
 
-def display_menu():
+def display_menu(): #commit1
        user = input("Input name: \n")
        if user not in n:
               print("Name not recognised")
@@ -51,7 +51,7 @@ def display_menu():
               print("Welcome, " + str(user) )
               real_menu()
 
-def add_member():
+def add_member(): #commit2
        new_n = input("Name: \n")
        new_r = input("Rank: \n")
        if new_r not in r:
@@ -81,7 +81,7 @@ def real_menu():
        print("3. Remove Crew Member")
        print("4. Change Crew Member Rank")
        print("5. Search for Crew Member")
-       
+       print("6. Filter Crew by Division")
        print("7. Calculate Payroll")
        print("8. Count of High ranking officers")
        opt = input("Select option: \n")
@@ -106,6 +106,10 @@ def real_menu():
              print("Search \n")
              search_crew()
 
+       elif opt == "6":
+             print("Div Filter")
+             filter_by_division()
+       
        elif opt == "7":
              print("Payroll")
              calculate_payroll()
@@ -140,22 +144,74 @@ def update_rank():
           print("Update rank for " + n[i.index(upd_i)])
           upd_r = input("New rank: \n")
           r[i.index(upd_i)] = upd_r
+          real_menu()
 
 def search_crew():
     sterm = input("Name, or Rank, or Div, or ID \n")
     if sterm == "Name":
           sname = input("Enter Name \n")
+          if sname not in n:
+                print("Name not recognised.")
+                search_crew()
           for x in range(len(n)):
                 if sname == n[x]:
                       print(n[x] + " - " + r[x] + " - " + d[x] + " - " + i[x])
+                      
     elif sterm == "Rank":
           srank = input("Enter Rank \n")
+          if srank not in r:
+                print("Rank not recognised.")
+                search_crew()
+          for x in range(len(r)):
+                if srank == r[x]:
+                      print(n[x] + " - " + r[x] + " - " + d[x] + " - " + i[x])
+                      
     elif sterm == "Div":
           sdiv = input("Enter Divison \n")
+          if sdiv not in d:
+                print("Divsion not recognised.")
+                search_crew()
+          for x in range(len(d)):
+                if sdiv == d[x]:
+                      print(n[x] + " - " + r[x] + " - " + d[x] + " - " + i[x])
+                      
     elif sterm == "ID":
           sid = input("Enter ID \n")
+          if sid not in i:
+                print("ID not recognised.")
+                search_crew()
+          for x in range(len(i)):
+                if sid == i[x]:
+                      print(n[x] + " - " + r[x] + " - " + d[x] + " - " + i[x])
+
+    else:
+          search_crew()
+                      
+    real_menu()
 def filter_by_division():
       div = input("See Command, or Operations, or Sciences: \n")
+      if div == "Command":
+            for x in range(len(d)):
+                  if div == d[x]:
+                        print(n[x] + " - " + r[x] + " - " + d[x] + " - " + i[x])
+      elif  div == "Operations":
+            for x in range(len(d)):
+                  if div == d[x]:
+                        print(n[x] + " - " + r[x] + " - " + d[x] + " - " + i[x])
+
+      elif div == "Sciences":
+            for x in range(len(d)):
+                  if div == d[x]:
+                        print(n[x] + " - " + r[x] + " - " + d[x] + " - " + i[x])
+      else:
+            print("Division not recognised. ")
+            filter_by_division()
+        
+    
+
+      real_menu()
+                        
+                
       
 def calculate_payroll():
       pay = 0
@@ -182,7 +238,7 @@ def calculate_payroll():
 def count_officers():
            count = 0
            for rank in r:
-                       if rank == "Captain" or rank == "Commander":
+                       if rank == "Captain" or rank == "Commander" or rank == "Admiral":
                              count = count + 1
            print("High ranking officers: " + str(count))
            real_menu()
