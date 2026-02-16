@@ -146,7 +146,7 @@ def update_rank(): # commit5
           r[i.index(upd_i)] = upd_r
           real_menu()
 
-def search_crew():
+def search_crew(): #commit7
     sterm = input("Name, or Rank, or Div, or ID \n")
     if sterm == "Name":
           sname = input("Enter Name \n")
