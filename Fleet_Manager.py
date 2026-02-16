@@ -84,6 +84,7 @@ def real_menu(): #commit3
        print("6. Filter Crew by Division")
        print("7. Calculate Payroll")
        print("8. Count of High ranking officers")
+       print("9. SHUTDOWN")
        opt = input("Select option: \n")
        
        if opt == "1":
@@ -117,6 +118,10 @@ def real_menu(): #commit3
        elif opt == "8":
              print("Count of High ranking officers: ")
              count_officers()
+
+       elif opt == "9":
+             print("SHUTDOWN")
+             shutdown()
     
         
 def remove_member(): #commit4
@@ -243,6 +248,8 @@ def count_officers(): #commit10
            print("High ranking officers: " + str(count))
            real_menu()
                            
+def shutdown(): #commit11
+      exit()
              
            
           
