@@ -134,7 +134,7 @@ def remove_member(): #commit4
     
     real_menu()
     
-def update_rank():
+def update_rank(): # commit5
     upd_i = input("ID: \n")
     if upd_i not in i:
           print("ID not recognised. ")
