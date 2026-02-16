@@ -30,7 +30,7 @@ def run_system_monolith():
         if opt == "1":  #== not =
             print("Current Crew List:")
             
-            for i in range(len(n)):
+            for i in range(len(n)): #reads the whole list and prints them all in order
                 print(n[i] + " - " + r[i]) 
                 
         elif opt == "2":
@@ -80,7 +80,7 @@ def run_system_monolith():
             for rank in r:
                 if rank == "Captain" or rank == "Commander": #syntax error 
                     count = count + 1
-            print("High ranking officers: " + str(count)) 
+            print("High ranking officers: " + str(count)) #formats as string
             
         elif opt == "5":
             print("Shutting down.")
@@ -112,4 +112,4 @@ def run_system_monolith():
             
         print("End of cycle.")
 
-run_system_monolith()
+run_system_monolith() #brackets missing
