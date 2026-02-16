@@ -74,7 +74,7 @@ def add_member(): #commit2
        print("Crew member added. ")
        real_menu()
 
-def real_menu():
+def real_menu(): #commit3
        print("\n--- MENU ----")
        print("1. Display Roster")
        print("2. Add Crew Member")
