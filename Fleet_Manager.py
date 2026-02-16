@@ -1,7 +1,11 @@
+
+valid_rank = ["Captain", "Commander", "Lt.Commander", "Lieutenant", "Cadet", "Ensign"]
+
 n = ["Jameson", "Picard", "Riker", "Laren", "Hajar"]
 r = ["Admiral", "Captain", "Commander", "Ensign", "Cadet"]
 d = ["Command", "Operations", "Sciences", "Security", "Security"]
 i = ["920795", "442834", "095400", "095400", "837552"]
+      
 
 
 print("LOADING..."),
@@ -18,9 +22,8 @@ while boot < 5:
 
 
 def main():
-   
-
- display_menu()
+      
+      display_menu()
 
  
 
@@ -54,7 +57,7 @@ def display_menu(): #commit1
 def add_member(): #commit2
        new_n = input("Name: \n")
        new_r = input("Rank: \n")
-       if new_r not in r:
+       if new_r not in valid_rank:
              print("Rank not recognised. ")
              add_member()
         
@@ -248,7 +251,7 @@ def count_officers(): #commit10
            print("High ranking officers: " + str(count))
            real_menu()
                            
-def shutdown(): #commit11
+def shutdown(): 
       exit()
              
            
