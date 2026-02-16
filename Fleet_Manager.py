@@ -1,5 +1,5 @@
 
-valid_rank = ["Captain", "Commander", "Lt.Commander", "Lieutenant", "Cadet", "Ensign"]
+valid_rank = ["Admiral", "Captain", "Commander", "Lt.Commander", "Lieutenant", "Cadet", "Ensign"]
 
 n = ["Jameson", "Picard", "Riker", "Laren", "Hajar"]
 r = ["Admiral", "Captain", "Commander", "Ensign", "Cadet"]
