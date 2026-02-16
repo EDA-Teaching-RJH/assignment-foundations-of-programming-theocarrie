@@ -34,7 +34,7 @@ def main():
      
 
 
-def display_roster():
+def display_roster(): #commit6
        for q in range(len(n)):
                 print(n[q] + " - " + r[q] + " - " + d[q] + " - " + i[q])
 
