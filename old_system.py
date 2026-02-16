@@ -58,7 +58,7 @@ def run_system_monolith():
                                 n.pop(x)
                                 r.pop(x)
                                 d.pop(x)
-                                print("Removed entry")
+                                print("Removed.")
                                 break
                                 
                 else:
