@@ -188,7 +188,7 @@ def search_crew(): #commit7
           search_crew()
                       
     real_menu()
-def filter_by_division():
+def filter_by_division(): #commit8
       div = input("See Command, or Operations, or Sciences: \n")
       if div == "Command":
             for x in range(len(d)):
