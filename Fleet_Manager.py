@@ -119,7 +119,7 @@ def real_menu(): #commit3
              count_officers()
     
         
-def remove_member():
+def remove_member(): #commit4
     del_i = input("ID: \n")
     if del_i not in i:
         print("ID not recognised. ")
