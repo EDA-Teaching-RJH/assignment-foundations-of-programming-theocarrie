@@ -235,7 +235,7 @@ def calculate_payroll(): #commit9
       real_menu()
                 
       
-def count_officers():
+def count_officers(): #commit10
            count = 0
            for rank in r:
                        if rank == "Captain" or rank == "Commander" or rank == "Admiral":
